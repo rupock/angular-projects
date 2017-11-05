@@ -5,13 +5,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome/welcome.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PorductListComponent } from './products/porduct-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    PorductListComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
         path:'home',component:WelcomeComponent
       },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      {path:'products', component: PorductListComponent},
       {path:'**',component:PagenotfoundComponent}
+      
     ])
   ],
   providers: [],
